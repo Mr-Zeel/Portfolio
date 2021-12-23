@@ -1,0 +1,698 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: rgb(47, 52, 68);
+}
+
+
+.header nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 55px;
+	width: 100%;
+	z-index: 999;
+	background-color: #525e65;
+	text-align: center;
+	box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+}
+
+/* Added */
+.navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 1.5rem;
+    }
+
+    .hamburger {
+	display: none;
+	position: relative;
+	right: 50%;
+    }
+    
+    .bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #e3e0e0cc;
+	box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+    }
+
+    .nav-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    }
+    .nav-item {
+	margin-left: 5rem;
+    }
+    
+
+    @media only screen and (max-width: 768px) {
+	.nav-menu {
+	    position: fixed;
+	    left: -100%;
+	    top: 0.1rem;
+	    flex-direction: column;
+	    background-color: #525e65;
+	    width: 100%;
+	    border-radius: 10px;
+	    text-align: center;
+	    transition: 0.3s;
+	    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+	}
+    
+	.nav-menu.active {
+	    left: 0;
+	}
+    
+	.nav-item {
+	    margin: 2.5rem 0;
+	}
+    
+	.hamburger {
+	    display: block;
+	    cursor: pointer;
+	}
+
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	    }
+	
+	    .hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	    }
+	
+	    .hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	    }
+    
+    }
+/* Added */
+
+.header nav ul li{
+	display: inline-block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	padding-inline-start: 40px;
+}
+
+.header nav li a{
+	list-style-type: none;
+	color: #DBE8D4;
+	font-family: "Josefin Sans",sans-serif;
+	text-decoration: none;
+}
+.header nav li a:hover{
+	list-style-type: none;
+	color: #DBE8D4;
+	font-family: "Josefin Sans",sans-serif;
+	text-decoration: none;
+	background-color: rgb(47, 52, 68);
+	border-bottom: 4px solid #73CCA8;
+	padding: 10px;
+	font-weight: bold;
+}
+
+
+
+.Container{
+	position: relative;	
+	top: 40px;
+	background-color: rgb(47, 52, 68);
+	/* height: 100%; */
+}
+
+
+.Container h1, h2, p{
+	text-align: center;
+	padding-top: 7%;
+	text-transform: uppercase;
+	letter-spacing: 15px;
+	font-weight: 100;
+	font-family: "Josefin Sans",sans-serif;
+	color: #DBE8D4;
+	font-size: 2.75rem;
+}
+/* Responsive h1 */
+@media screen and (max-width: 425px) {
+	.Container h1{
+		font-size: 1.75rem;
+		letter-spacing: 10px;
+	}
+	
+}
+@media screen and (max-width: 375px) {
+	.Container h1{
+		font-size: 1.50rem;
+		margin-top: 8%;
+		letter-spacing: 10px;
+	}
+	
+}
+@media screen and (max-width: 320px) {
+	.Container h1{
+		font-size: 1rem;
+		margin-top: 8%;
+		letter-spacing: 7px;
+	}
+	
+}
+/* Responsive h1 */
+
+.Container h2, p{
+	padding-top: 30px;
+	letter-spacing: normal;
+	font-size: 0.8em;
+	font-weight: 500;
+}
+
+@media screen and (max-width: 425px) {
+	.Container h2{
+		font-size: 0.6rem;
+	}
+	
+}
+@media screen and (max-width: 375px) {
+	.Container h2{
+		font-size: 0.5rem;
+	}
+	
+}
+@media screen and (max-width: 320px) {
+	.Container h2{
+		font-size: 0.4rem;
+	}
+	
+}
+
+
+.Container img{
+	height: 150px;
+	width: 150px;
+	display: block;
+	margin: auto;
+	margin-top: 25px;
+	border: 7px solid gold;
+	border-radius: 50%;
+}
+
+
+.Container p{
+	font-size: 0.8em;
+	padding: 35px 20%;
+	font-weight: 300;
+	line-height: 15px;
+}
+@media screen and (max-width: 425px) {
+	.Container p{
+		padding: 35px 10%;
+	}
+	
+}
+@media screen and (max-width: 375px) {
+	.Container p{
+		padding: 35px 7%;
+	}
+	
+}
+
+.AboutMeSection{
+	/* height: 700px; */
+	/* height: 100vh; */
+	border-bottom: 2px solid gold;
+	padding-top: 10px;
+}
+
+/* Responsive for scrolling */
+
+@media screen and (max-width: 785px) {
+	.AboutMeSection{
+		padding-top: 20px;
+	}
+	
+}
+@media screen and (max-width: 425px) {
+	.AboutMeSection{
+		padding-top: 40px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.AboutMeSection{
+		padding-top: 50px;
+	}
+	
+}
+
+/* Responsive for scrolling */
+
+.AboutMeSection h3{
+	text-align: center;
+	padding-top: 7%;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	font-weight: 100;
+	font-family: "Josefin Sans",sans-serif;
+	color: greenyellow;
+	width: 100%;
+	text-align: center; 
+	border-bottom: 2px solid gold; 
+	line-height: 0.1em;
+	margin: 10px 0 20px;
+}
+
+
+.AboutMeSection h3 span{
+	background:#525e65;
+	padding:10px 30px;
+	border-radius: 30px;
+}
+
+.AboutMeSection > p{
+	text-align: center;
+	text-transform: uppercase;
+	color: greenyellow;
+	padding: 35px 10%;
+	font-style: italic;
+	font-size: 1em;
+	line-height: 30px;
+	width: 85%;
+	margin: auto;
+	background-color:  #525e65;
+	margin-top: 100px;
+	-webkit-box-shadow: 0 0 15px gold;
+        box-shadow: 0 0 20px gold;
+	border-radius: 20px;
+	margin-bottom: 50px;
+}
+
+
+/* Responsive for scrolling */
+@media screen and (max-width: 785px) {
+	.AboutMeSection > p{
+		font-size: 0.8em;
+	}
+	
+}
+@media screen and (max-width: 425px) {
+	.AboutMeSection > p{
+		font-size: 0.6em;
+	}
+	
+}
+@media screen and (max-width: 375px) {
+	.AboutMeSection > p{
+		padding: 35px 7%;
+	}
+	
+}
+/* Responsive for scrolling */
+
+
+
+
+
+/* ProjectSection CSS */
+
+.projectSection{
+	/* height: 700px; */
+	/* height: 100vh; */
+	border-bottom: 2px solid gold;
+	padding-top: 10px;
+}
+
+/* Responsive for scrolling */
+@media screen and (max-width: 785px) {
+	.projectSection{
+		padding-top: 20px;
+	}
+	
+}
+@media screen and (max-width: 425px) {
+	.projectSection{
+		padding-top: 40px;
+	}
+	
+}
+@media screen and (max-width: 320px) {
+	.projectSection{
+		padding-top: 50px;
+	}
+	
+}
+/* Responsive for scrolling */
+
+.projectSection h3{
+	text-align: center;
+	padding-top: 7%;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	font-weight: 100;
+	font-family: "Josefin Sans",sans-serif;
+	color: greenyellow;
+	width: 100%;
+	text-align: center; 
+	border-bottom: 2px solid gold; 
+	line-height: 0.1em;
+	margin: 10px 0 20px;
+}
+
+
+.projectSection h3 span{
+	background:#525e65;
+	padding:10px 30px;
+	border-radius: 30px;
+}
+
+
+
+/* Float four columns side by side */
+.column {
+	float: left;
+	width: 25%;
+	padding: 100px 10px;
+}
+      
+      /* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+      
+      /* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+      
+      /* Responsive columns */
+@media screen and (max-width: 785px) {
+	.column {
+	  width: 100%;
+	  display: block;
+	  /* margin-bottom: 20px; */
+	  padding: 50px 10px;
+	}
+	.card img{
+		border: none;
+		border-radius: 0px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.334);
+		width: 100%;
+		height: 250px;
+		margin-bottom: 30px;
+	}
+}
+      
+      /* Style the counter cards */
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.334);
+	/* padding: 16px; */
+	text-align: center;
+	background-color: #525e65;
+}
+
+.card img{
+	border: none;
+	border-radius: 0px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.334);
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.card h4{
+	font-weight: 100;
+	font-family: "Josefin Sans",sans-serif;
+	color: #DBE8D4;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.card p{
+	padding: 15px;
+}
+
+/* ProjectSection CSS */
+
+
+
+/* Contact Me Form */
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+	background-color: rgb(224, 217, 217);
+      }
+      
+::placeholder{
+	font-family: "Josefin Sans",sans-serif;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.334);
+}
+
+option::placeholder{
+	font-family: "Josefin Sans",sans-serif;
+	text-transform: uppercase;
+	color: rgba(0, 0, 0, 0.334);
+}
+
+      label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+	font-family: "Josefin Sans",sans-serif;
+	color: rgba(172, 255, 47, 0.642);
+	text-transform: uppercase;
+      }
+      
+      input[type=submit] {
+	background-color: rgb(70, 77, 101);
+	color: gold;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 15px;
+	float: right;
+	font-family: "Josefin Sans",sans-serif;
+	text-transform: uppercase;
+	border: 2px solid silver;
+      }
+      
+      input[type=submit]:hover {
+	background-color: gold;
+	color: #000000;
+	font-family: "Josefin Sans",sans-serif;
+	font-weight: bold;
+	border: 2px solid rgb(0, 0, 0);
+      }
+      
+      .contactMeForm {
+	border-radius: 15px;
+	background-color: #525e65;
+	padding: 20px;
+	margin: 20px;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	-webkit-box-shadow: 0 0 15px gold;
+        box-shadow: 0 0 20px gold;
+      }
+      
+      .col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+      }
+      
+      .col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+	content: "";
+	display: table;
+	clear: both;
+      }
+      
+      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+	.col-25, .col-75, input[type=submit] {
+	  width: 100%;
+	  margin-top: 0;
+	}
+      }
+
+
+      .contactMe h3{
+	text-align: center;
+	padding-top: 7%;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	font-weight: 100;
+	font-family: "Josefin Sans",sans-serif;
+	color: greenyellow;
+	width: 100%;
+	text-align: center; 
+	border-bottom: 2px solid gold; 
+	line-height: 0.1em;
+	margin: 10px 0 20px;
+}
+
+
+.contactMe h3 span{
+	background:#525e65;
+	padding:10px 30px;
+	border-radius: 30px;
+}
+
+.contactMe{
+	/* height: 700px; */
+	/* height: 100vh; */
+	border-bottom: 2px solid gold;
+	padding-top: 10px;
+}
+
+/* Contact Me Form */
+
+
+/* Responsive for scrolling */
+@media screen and (max-width: 785px) {
+	.contactMe{
+		padding-top: 20px;
+	}
+	
+}
+@media screen and (max-width: 425px) {
+	.contactMe{
+		padding-top: 40px;
+	}
+	
+}
+@media screen and (max-width: 320px) {
+	.contactMe{
+		padding-top: 50px;
+	}
+	
+}
+/* Responsive for scrolling */
+
+
+/* Note: on responsive comment the height sets in div containers! */
+
+
+
+
+
+/* Footer */
+
+footer{
+	background: rgb(54, 53, 53);
+	height: auto;
+	width: 100vw;
+	padding-top: 40px;
+	color: #fff;
+	/* margin-top: 30%; */
+    }
+    .footer-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+    }
+    .socials{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem 0 1rem 0;
+    }
+    .socials li{
+	margin: 0 10px;
+    }
+    .socials a{
+	text-decoration: none;
+	color: #fff;
+	border: 1.1px solid white;
+	padding: 5px;
+    
+	border-radius: 50%;
+    
+    }
+    .socials a i{
+	font-size: 1.1rem;
+	width: 20px;
+    
+    
+	transition: color .4s ease;
+    
+    }
+    .socials a:hover i{
+	color: aqua;
+    }
+    
+
+    .contact a{
+	color: #73CCA8;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.contact{
+	    margin: 20px 0;
+	    margin-bottom: 15px;
+}
+
+.contact a{
+	color: #DBE8D4;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-family: "Josefin Sans",sans-serif;
+	font-size: small;
+	/* text-decoration:underline 2px rgb(255, 0, 0); */
+	border-bottom: 2px solid #73CCA8;
+	border-top: 2px solid #73CCA8;
+	padding: 9px 0;
+}
+
+.info{
+	font-size: 0.8em;
+	color: #525e65;
+	text-align: center;
+}
+
+
+.info p{
+	margin-top: 9px;
+	padding-top: 0;
+
+}
+
+button{
+	margin: 19px 0;
+	padding: 10px;
+	border-radius: 50%;
+}
+
+button a{
+	text-decoration: none;
+}
+/* Footer */
+
